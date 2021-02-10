@@ -12,7 +12,6 @@ if ($conn->connect_error){
 //sql to create table
 $sql = "CREATE TABLE class(
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    idmovie VARCHAR(30) NOT NULL,
     namemovie VARCHAR(30) NOT NULL,
     dtime VARCHAR(30),
     username VARCHAR(30) NOT NULL,

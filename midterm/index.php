@@ -64,8 +64,8 @@ if (!$conn) {
 $conn->set_charset("utf8"); //ภาษา?>
 <table border="2" style="width:80%">
     <tr>
-    <form method="get" id="form" enctype="multipart/form-data" action="insert_form.php">
-        <button class="button4">เพิ่มนักศึกษา</button>
+    <form method="get" id="form" enctype="multipart/form-data" action="insert_from.php">
+        <button class="button4">เพิ่มข้อมูล</button>
     </form>
     <form method="get" id="form" enctype="multipart/form-data" action="logout.php">
         <button class="button3">ออกจากระบบ</button>
@@ -78,7 +78,6 @@ $conn->set_charset("utf8"); //ภาษา?>
     </form>
     </div>
     <tr id="th">
-        <td>ID</td>
         <td>รหัสภาพยนต์</td>
         <td>ชื่อภาพยนต์</td>
         <td>เวลาที่ฉาย</td>
@@ -96,7 +95,6 @@ if($result->num_rows>0){ //มากกว่า0row
     while($row=$result->fetch_assoc()){ ?>
         <tr>
             <td><?php echo $row["id"]; // เอาค่าจากฟิวด์ ชื่อนั้นๆ ๆๆๆ มาแสดง ?></td>
-            <td><?php echo $row["idmovie"];?></td>
             <td><?php echo $row["namemovie"];?></td>
             <td><?php echo $row["dtime"];?></td>
             <td><?php echo $row["username"];?></td>
